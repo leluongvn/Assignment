@@ -1,12 +1,12 @@
 var express = require("express");
 var app = express();
 var port = 3000;
-var login = require('./router/Login')
+var account = require('./router/Account')
 
 var connect = require("./connect/connectDB");
 
+app.use('/',account)
 
-app.use('/',login)
 
 app.listen(port, () => {
   console.log("Server runing at port : " + port);
