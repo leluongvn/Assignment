@@ -9,15 +9,18 @@ var codeVetify = 0
 var check = false
 var emailVetify = null
 
-// const { end } = require("../connect/connectDB");
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.post("/register", (req, res) => {
+  
+  
   var Uid = uuid.v4();
   var username = req.body.name
   var email = req.body.email
   var password = req.body.password
+
+  
   connect.query(
     "SELECT * FROM user where email=?",
     [email],
