@@ -1,6 +1,8 @@
 # ServerAssignment
 
-set up 
 require
 + node js
++ multer
++ emailer
+
 
