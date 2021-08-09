@@ -130,8 +130,7 @@ app.post("/confirm", (req, res) => {
     var reqCode = req.body.code;
     var newPassword = req.body.newPassword
     if (reqCode == codeVetify) {
-      var sql="UPDATE `user` SET `password`=? WHERE ?"
-      console.log("email "+emailVetify);
+      
       connect.query("UPDATE `user` SET `password`=? WHERE email=?",[newPassword,emailVetify],
        function (error, results, fields) {
         if (error) throw error
