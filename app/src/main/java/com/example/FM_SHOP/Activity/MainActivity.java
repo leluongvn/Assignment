@@ -1,13 +1,14 @@
-package com.example.FM_SHOP;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+package com.example.FM_SHOP.Activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import com.example.FM_SHOP.R;
 import com.example.FM_SHOP.uiUser.AccountFragment;
 import com.example.FM_SHOP.uiUser.CartFragment;
 import com.example.FM_SHOP.uiUser.StoreFragment;

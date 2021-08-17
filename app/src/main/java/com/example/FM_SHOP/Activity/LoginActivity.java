@@ -1,7 +1,4 @@
-package com.example.FM_SHOP;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
+package com.example.FM_SHOP.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +7,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+
 import com.example.FM_SHOP.Api.ApiService;
+import com.example.FM_SHOP.R;
 import com.example.FM_SHOP.model.User;
 import com.example.FM_SHOP.uiAdmin.AdminActivity;
 import com.google.android.material.textfield.TextInputEditText;

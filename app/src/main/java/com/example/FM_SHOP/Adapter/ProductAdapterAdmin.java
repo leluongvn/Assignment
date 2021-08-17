@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.example.FM_SHOP.R;
 import com.example.FM_SHOP.model.Product;
@@ -75,9 +74,10 @@ public class ProductAdapterAdmin extends RecyclerView.Adapter<ProductAdapterAdmi
     }
 
 
-    public class viewHolderProduct extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class viewHolderProduct extends RecyclerView.ViewHolder
+            implements View.OnClickListener {
         ImageView imageView;
-        TextView textViewName, textViewPrice, textViewAmountBuy;
+        TextView textViewName, textViewPrice;
 
         public viewHolderProduct(@NonNull View itemView) {
             super(itemView);

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -74,9 +75,7 @@ public class StoreFragment extends Fragment {
     private void setListProduct() {
 
         ApiService service = RetrofitClient.getInstance().create(ApiService.class);
-
         Call<List<Product>> listCall = service.productList();
-
         listCall.enqueue(new Callback<List<Product>>() {
             @Override
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
@@ -84,7 +83,6 @@ public class StoreFragment extends Fragment {
                 products = response.body();
                 setAdapter(products);
             }
-
             @Override
             public void onFailure(Call<List<Product>> call, Throwable t) {
                 Log.e("ERROR", "" + t);
@@ -101,16 +99,27 @@ public class StoreFragment extends Fragment {
         mRecyclerViewProduct.setAdapter(adapterUser);
         mRecyclerViewProduct.setLayoutManager(manager);
 
-        adapterUser.setItemClick(new ProductAdapterUser.OnclickListener() {
-            @Override
-            public void onclickItem(int position, View view) {
-                Product product = productList.get(position);
-                Intent intent = new Intent(getContext(), DetailProductActivity.class);
-                intent.putExtra("product", product);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-            }
-        });
+       adapterUser.setItemClick(new ProductAdapterUser.OnclickListener() {
+           @Override
+           public void onclickItem(int position, View view) {
+               Toast.makeText(getContext(), "lollooo"+position, Toast.LENGTH_SHORT).show();
+           }
+       });
+
+//
+//
+//        adapterUser.setItemClick(new ProductAdapterUser.OnclickListener() {
+//            @Override
+//            public void onclickItem(int position, View view) {
+////                Product product = productList.get(position);
+////                Intent intent = new Intent(getContext(), DetailProductActivity.class);
+////                intent.putExtra("product", product);
+////                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+////                startActivity(intent);
+//
+//                Toast.makeText(getContext(), ""+position, Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
     }
 }

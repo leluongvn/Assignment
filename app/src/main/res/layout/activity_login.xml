@@ -25,7 +25,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="35dp"
         app:endIconMode="clear_text">
@@ -42,11 +42,10 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="35dp"
         app:endIconMode="password_toggle">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
@@ -62,6 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="35dp"
+        android:textColor="@color/white"
         android:layout_marginRight="35dp"
         android:backgroundTint="#FF9800"
         android:text="LOGIN " />

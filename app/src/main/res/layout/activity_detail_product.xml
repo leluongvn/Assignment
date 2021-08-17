@@ -1,9 +1,133 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include
+        android:id="@+id/tbDetailProduct"
+        layout="@layout/toolbar_detail" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imvPRDDetail"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/tbDetailProduct"
+        android:layout_margin="5dp"
+        android:src="@drawable/aaa"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvNamePTD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imvPRDDetail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="VEST NAM CONG SO "
+        android:textColor="@color/black"
+        android:textSize="17dp" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutOne"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tvNamePTD"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="777 d"
+            android:id="@+id/tvPricePRD"
+            android:textColor="@color/purple_700" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_rate_24" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_rate_24" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_rate_24" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_rate_24" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_rate_24" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcPRDDetail"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/layoutOne"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/rcPRDDetail"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#8BC34A"
+            android:drawableTop="@drawable/ic_baseline_chat_24"
+            android:text="Chat"
+            android:paddingTop="5dp"
+            android:textSize="10dp"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_baseline_add_shopping_cart_24"
+            android:background="#8BC34A"
+            android:textSize="10dp"
+            android:paddingTop="5dp"
+            android:text="Add to cart"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF5722"
+            android:text="Buy now"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>

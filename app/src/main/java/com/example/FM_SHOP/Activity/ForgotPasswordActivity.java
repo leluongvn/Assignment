@@ -1,7 +1,4 @@
-package com.example.FM_SHOP;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
+package com.example.FM_SHOP.Activity;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,7 +8,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+
 import com.example.FM_SHOP.Api.ApiService;
+import com.example.FM_SHOP.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -125,7 +126,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             public void onResponse(Call<String> call, Response<String> response) {
                 if (response.body().equals("Success update")) {
                     Toast.makeText(ForgotPasswordActivity.this, "Updated", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(ForgotPasswordActivity.this,LoginActivity.class);
+                    Intent intent = new Intent(ForgotPasswordActivity.this, LoginActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 } else if (response.body().equals("Code invalid")) {

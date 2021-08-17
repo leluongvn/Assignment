@@ -13,19 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClientAssignment"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".uiAdmin.AddProductActivity"></activity>
+        <activity android:name=".Activity.MessageActivity"></activity>
+        <activity android:name=".uiAdmin.AddProductActivity" />
         <activity android:name=".uiAdmin.AdminActivity" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".uiUser.DetailProductActivity" />
-        <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

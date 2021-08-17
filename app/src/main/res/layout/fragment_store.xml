@@ -6,7 +6,7 @@
 
     <include
         android:id="@+id/tbStore"
-        layout="@layout/toolbar">
+        layout="@layout/toolbar_detail">
     </include>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -100,11 +100,9 @@ public class HomeFragment extends Fragment {
         ProductAdapterAdmin adapter = new ProductAdapterAdmin(products, getActivity());
         GridLayoutManager manager1 = new GridLayoutManager
                 (getContext(), 2, GridLayoutManager.VERTICAL, false);
-//        manager1.sets
 
         recyclerView.setLayoutManager(manager1);
         recyclerView.setAdapter(adapter);
-
         adapter.setOnItemClickListener(new ProductAdapterAdmin.ClickListener() {
             @Override
             public void onItemClick(int position, View view) {
