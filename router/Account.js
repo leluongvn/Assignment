@@ -19,8 +19,7 @@ app.post("/register", (req, res) => {
   var username = req.body.name
   var email = req.body.email
   var password = req.body.password
-
-  
+  var phone =999
   connect.query(
     "SELECT * FROM user where email=?",
     [email],
@@ -31,15 +30,15 @@ app.post("/register", (req, res) => {
       if (result && result.length) res.json("User already exits");
       else {
         connect.query(
-          "INSERT INTO `user`(`id`, `name`, `email`, `password`) VALUES (?,?,?,?)",
-          [Uid, username, email, password],
+          "INSERT INTO `user`(`id`, `name`, `email`,`phone`, `password`) VALUES (?,?,?,?,?)",
+          [Uid, username, email,phone, password],
           function (err, result, fields) {
             connect.on("error", function (err) {
-              console.log("MY SQL ERRPR ", err)
+              console.log("MY SQL ERROR", err)
               res.json("Register error")
             });
             res.json("Success fully")
-            console.log("Insert success ")
+            console.log("Insert success")
           }
         );
       }

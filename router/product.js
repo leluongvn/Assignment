@@ -100,15 +100,16 @@ app.post("/update", (req, res) => {
   var image = req.body.image;
   var price = req.body.price;
   var id= req.body.id;
-
+  console.log(name,type,price,amount,image);
   connect.query(
     "UPDATE `product` SET `name`= ?,`type`= ?,`amount`= ?,`image`= ?,`price`= ? WHERE id = ?",
     [name,type,amount,image,price,id],
     function (error, results, fields) {
       if (error){
         console.log("ERROR",error)
-      }
+      } 
         res.json("Success");
+        console.log("Update success")
     }
   );
 
