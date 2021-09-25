@@ -1,0 +1,2 @@
+rootProject.name = "ClientAssignment"
+include ':app'
